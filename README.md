@@ -1,4 +1,4 @@
-# 🏥 Sistem Rekam Medis Klinik - Medika Sehat
+# Sistem Rekam Medis Klinik - Medika Sehat
 
 **Sistem Informasi Rekam Medis Elektronik (EMR) untuk Manajemen Klinik Modern**
 
@@ -6,36 +6,36 @@ Aplikasi berbasis web yang dirancang untuk mengelola data pasien, kunjungan, rek
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 
-### 👥 **Manajemen Pengguna**
+### **Manajemen Pengguna**
 - Login dengan role-based access (Admin, Petugas, Dokter)
 - Manajemen user dengan sistem autentikasi bcryptjs
 - Session management dengan timeout 8 jam
 
-### 🏃 **Manajemen Pasien**
+### **Manajemen Pasien**
 - CRUD data pasien lengkap (nama, NIK, alamat, no HP, dll)
 - Nomor Rekam Medis (RM) otomatis dan unik
 - History kunjungan pasien
 
-### 📋 **Manajemen Kunjungan**
+### **Manajemen Kunjungan**
 - Pendaftaran kunjungan pasien
 - Sistem antrean (Menunggu, Diperiksa, Selesai)
 - Penugasan dokter otomatis
 - Filter berdasarkan tanggal, status, dan dokter
 
-### 🩺 **Rekam Medis**
+### **Rekam Medis**
 - Input data pemeriksaan (tekanan darah, suhu, berat badan)
 - Diagnosis dan tindakan medis
 - Catatan klinis untuk setiap kunjungan
 
-### 💊 **Manajemen Obat & Resep**
+### **Manajemen Obat & Resep**
 - Inventaris obat dengan tracking stok
 - Alert stok obat menipis (< 10 unit)
 - Pemberian resep obat per rekam medis
 - Detail aturan pakai obat
 
-### 📊 **Dashboard Statistik**
+### **Dashboard Statistik**
 - Total pasien terdaftar
 - Kunjungan hari ini
 - Antrean pasien berdasarkan status
@@ -44,7 +44,7 @@ Aplikasi berbasis web yang dirancang untuk mengelola data pasien, kunjungan, rek
 
 ---
 
-## 🛠️ Teknologi Stack
+## Teknologi Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -68,7 +68,7 @@ Aplikasi berbasis web yang dirancang untuk mengelola data pasien, kunjungan, rek
 
 ---
 
-## 📦 Instalasi & Setup
+## Instalasi & Setup
 
 ### **Prasyarat**
 - Node.js v16+ ([Download](https://nodejs.org/))
@@ -283,7 +283,7 @@ id | rekam_medis_id | obat_id | jumlah | aturan_pakai
 
 ---
 
-## 🔐 Security Features
+## Security Features
 
 - ✅ Password hashing dengan bcryptjs
 - ✅ Session-based authentication
@@ -295,7 +295,7 @@ id | rekam_medis_id | obat_id | jumlah | aturan_pakai
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### **Error: "Cannot find module 'pg'"**
 Solusi:
@@ -344,7 +344,7 @@ npm test
 
 ---
 
-## 🤝 Kontribusi
+## Kontribusi
 
 Kami menerima kontribusi! Silakan:
 1. Fork repository
@@ -355,13 +355,13 @@ Kami menerima kontribusi! Silakan:
 
 ---
 
-## 📄 Lisensi
+## Lisensi
 
 Proyek ini dilisensikan di bawah **ISC License**. Lihat file `LICENSE` untuk detail.
 
 ---
 
-## 📞 Kontak & Support
+## Kontak & Support
 
 - **Author**: Falmhz
 - **Repository**: https://github.com/falmhz/rekam-medis-app
@@ -369,7 +369,7 @@ Proyek ini dilisensikan di bawah **ISC License**. Lihat file `LICENSE` untuk det
 
 ---
 
-## 🎯 Roadmap Fitur Mendatang
+## Roadmap Fitur Mendatang
 
 - [ ] Export data ke Excel/PDF
 - [ ] SMS notification untuk reminder kunjungan
@@ -381,7 +381,7 @@ Proyek ini dilisensikan di bawah **ISC License**. Lihat file `LICENSE` untuk det
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Login Page
 ![Medika Sehat Login](public/images/logo.svg)
