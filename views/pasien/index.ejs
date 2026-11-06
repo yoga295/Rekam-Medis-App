@@ -3,7 +3,7 @@
 <div class="card">
   <div class="card-header">
     <div class="card-title">
-      <span>👥 Data Pasien Klinik</span>
+      <span>Data Pasien Klinik</span>
     </div>
     <% if (currentUser.role === 'petugas' || currentUser.role === 'admin') { %>
       <a href="/pasien/tambah" class="btn btn-primary">
@@ -16,12 +16,12 @@
     <!-- Filter Pencarian -->
     <div class="filter-bar">
       <div class="search-input-wrapper">
-        <span class="search-icon">🔍</span>
-        <input 
-          type="text" 
-          id="searchPasien" 
-          class="form-control search-input" 
-          placeholder="Cari berdasarkan Nama, No. RM, atau NIK..." 
+        <span class="search-icon"><i class="bi bi-search"></i></span>
+        <input
+          type="text"
+          id="searchPasien"
+          class="form-control search-input"
+          placeholder="Cari berdasarkan Nama, No. RM, atau NIK..."
           data-table-filter="pasienTable"
           value="<%= searchQuery || '' %>"
         >

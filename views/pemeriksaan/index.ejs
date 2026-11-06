@@ -3,7 +3,7 @@
 <div class="card">
   <div class="card-header">
     <div class="card-title">
-      <span>🩺 Antrean Pemeriksaan Pasien Anda</span>
+      <span class="bi bi-heart-pulse"> Antrean Pemeriksaan Pasien Anda</span>
     </div>
     <span style="font-size: 13px; color: var(--text-muted);">
       Dokter: <strong><%= currentUser.nama %></strong>
@@ -48,7 +48,7 @@
                 </td>
                 <td class="text-center">
                   <a href="/pemeriksaan/<%= k.id %>" class="btn btn-primary btn-sm">
-                    🩺 <%= k.status === 'Diperiksa' ? 'Lanjutkan Periksa' : 'Periksa' %>
+                    <%= k.status === 'Diperiksa' ? 'Lanjutkan Periksa' : 'Periksa' %>
                   </a>
                 </td>
               </tr>
@@ -56,7 +56,7 @@
           <% } else { %>
             <tr>
               <td colspan="7" class="text-center" style="padding: 40px; color: var(--text-muted);">
-                🎉 Saat ini tidak ada antrean pasien yang menunggu untuk diperiksa.
+                Saat ini tidak ada antrean pasien yang menunggu untuk diperiksa.
               </td>
             </tr>
           <% } %>

@@ -3,7 +3,7 @@
 <div class="card">
   <div class="card-header">
     <div class="card-title">
-      <span>📋 Antrean & Daftar Kunjungan Pasien</span>
+      <span>Antrean & Daftar Kunjungan Pasien</span>
     </div>
     <% if (currentUser.role === 'petugas' || currentUser.role === 'admin') { %>
       <a href="/kunjungan/tambah" class="btn btn-primary">
@@ -15,7 +15,7 @@
   <div class="card-body">
     <!-- Filter Status & Tanggal -->
     <form method="GET" action="/kunjungan" class="filter-bar" style="background-color: #f8fafc; padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-      
+
       <!-- Filter Status -->
       <div style="display: flex; align-items: center; gap: 8px;">
         <label for="status" style="font-size: 13px; font-weight: 600;">Status:</label>
@@ -30,12 +30,12 @@
       <!-- Filter Tanggal -->
       <div style="display: flex; align-items: center; gap: 8px;">
         <label for="tanggal" style="font-size: 13px; font-weight: 600;">Tanggal:</label>
-        <input 
-          type="date" 
-          name="tanggal" 
-          id="tanggal" 
-          class="form-control" 
-          style="width: auto;" 
+        <input
+          type="date"
+          name="tanggal"
+          id="tanggal"
+          class="form-control"
+          style="width: auto;"
           value="<%= tanggalFilter || '' %>"
         >
       </div>
@@ -44,10 +44,10 @@
       <% if (currentUser.role === 'dokter') { %>
         <div style="display: flex; align-items: center; gap: 8px;">
           <label style="font-size: 13px; font-weight: 600; cursor: pointer;">
-            <input 
-              type="checkbox" 
-              name="milik_saya" 
-              value="1" 
+            <input
+              type="checkbox"
+              name="milik_saya"
+              value="1"
               <%= dokterFilter === '1' ? 'checked' : '' %>
               onchange="this.form.submit()"
             >
@@ -61,10 +61,10 @@
 
       <!-- Pencarian Langsung di Tabel -->
       <div class="search-input-wrapper" style="margin-left: auto;">
-        <input 
-          type="text" 
-          class="form-control search-input" 
-          placeholder="Ketik untuk memfilter tabel..." 
+        <input
+          type="text"
+          class="form-control search-input"
+          placeholder="Ketik untuk memfilter tabel..."
           data-table-filter="antreanTable"
         >
       </div>
@@ -110,7 +110,7 @@
                     <% if (currentUser.role === 'dokter') { %>
                       <% if (k.status === 'Menunggu' || k.status === 'Diperiksa') { %>
                         <a href="/pemeriksaan/<%= k.id %>" class="btn btn-primary btn-sm">
-                          🩺 Periksa
+                          Periksa
                         </a>
                       <% } else { %>
                         <a href="/pemeriksaan/<%= k.id %>" class="btn btn-outline btn-sm">

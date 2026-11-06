@@ -3,25 +3,25 @@
 <div class="card" style="max-width: 650px; margin: 0 auto;">
   <div class="card-header">
     <div class="card-title">
-      <span><%= isEdit ? '✏️ Ubah Pengguna' : '➕ Tambah Pengguna Baru' %></span>
+      <span><%= isEdit ? 'Ubah Pengguna' : 'Tambah Pengguna Baru' %></span>
     </div>
     <a href="/user" class="btn btn-outline btn-sm">&larr; Kembali ke Daftar Pengguna</a>
   </div>
 
   <div class="card-body">
     <form action="<%= isEdit ? '/user/' + userItem.id + '/edit' : '/user/tambah' %>" method="POST">
-      
+
       <!-- Nama Lengkap -->
       <div class="form-group">
         <label for="nama" class="form-label">Nama Lengkap & Gelar <span class="required">*</span></label>
-        <input 
-          type="text" 
-          id="nama" 
-          name="nama" 
-          class="form-control" 
-          placeholder="Contoh: dr. Budi Santoso, Sp.PD atau Siti Rahma (Petugas)" 
-          value="<%= userItem.nama %>" 
-          required 
+        <input
+          type="text"
+          id="nama"
+          name="nama"
+          class="form-control"
+          placeholder="Contoh: dr. Budi Santoso, Sp.PD atau Siti Rahma (Petugas)"
+          value="<%= userItem.nama %>"
+          required
           autofocus
         >
       </div>
@@ -29,13 +29,13 @@
       <!-- Username -->
       <div class="form-group">
         <label for="username" class="form-label">Nama Pengguna (Username) <span class="required">*</span></label>
-        <input 
-          type="text" 
-          id="username" 
-          name="username" 
-          class="form-control" 
-          placeholder="Contoh: drbudi atau budi12" 
-          value="<%= userItem.username %>" 
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="form-control"
+          placeholder="Contoh: drbudi atau budi12"
+          value="<%= userItem.username %>"
           <%= isEdit ? 'readonly style="background-color: #f1f5f9;"' : 'required' %>
         >
         <% if (isEdit) { %>
@@ -47,13 +47,13 @@
       <% if (!isEdit) { %>
         <div class="form-group">
           <label for="password" class="form-label">Kata Sandi (Password) <span class="required">*</span></label>
-          <input 
-            type="password" 
-            id="password" 
-            name="password" 
-            class="form-control" 
-            placeholder="Minimal 6 karakter" 
-            minlength="6" 
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Minimal 6 karakter"
+            minlength="6"
             required
           >
         </div>
@@ -72,7 +72,7 @@
 
       <div class="form-actions">
         <button type="submit" class="btn btn-primary">
-          <%= isEdit ? '💾 Simpan Perubahan Pengguna' : '✅ Daftarkan Pengguna Baru' %>
+          <%= isEdit ? 'Simpan Perubahan Pengguna' : 'Daftarkan Pengguna Baru' %>
         </button>
         <a href="/user" class="btn btn-outline">Batal</a>
       </div>

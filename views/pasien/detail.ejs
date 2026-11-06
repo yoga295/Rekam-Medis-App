@@ -11,7 +11,7 @@
         <%= pasien.no_rm %>
       </span>
     </div>
-    
+
     <div class="patient-info-meta">
       <div class="meta-item">
         <div class="meta-label">NIK</div>
@@ -44,7 +44,7 @@
         + Buat Kunjungan Baru
       </a>
       <a href="/pasien/<%= pasien.id %>/edit" class="btn btn-warning">
-        ✏️ Ubah Data Pasien
+        Ubah Data Pasien
       </a>
     <% } %>
     <a href="/pasien" class="btn btn-outline">&larr; Daftar Pasien</a>
@@ -55,7 +55,7 @@
 <div class="card">
   <div class="card-header">
     <div class="card-title">
-      <span>📑 Riwayat Rekam Medis Pasien</span>
+      <span>Riwayat Rekam Medis Pasien</span>
     </div>
     <span style="font-size: 13px; color: var(--text-muted);">
       Total: <%= riwayat ? riwayat.length : 0 %> Kunjungan
@@ -137,7 +137,7 @@
                 <% if (item.resep && item.resep.length > 0) { %>
                   <div style="margin-top: 10px;">
                     <div style="font-size: 12px; font-weight: 700; color: #475569; text-transform: uppercase; margin-bottom: 6px;">
-                      💊 Resep Obat yang Diberikan:
+                      Resep Obat yang Diberikan:
                     </div>
                     <table class="prescription-table">
                       <thead>
@@ -170,7 +170,7 @@
                   <span>Pasien masih dalam antrean (Status: <strong><%= item.status %></strong>). Rekam medis belum diisi dokter.</span>
                   <% if (currentUser.role === 'dokter') { %>
                     <a href="/pemeriksaan/<%= item.kunjungan_id %>" class="btn btn-primary btn-sm">
-                      🩺 Periksa Sekarang
+                      Periksa Sekarang
                     </a>
                   <% } %>
                 </div>

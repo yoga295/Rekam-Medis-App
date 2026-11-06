@@ -54,7 +54,7 @@
 
   <div style="display: flex; flex-direction: column; gap: 8px;">
     <a href="/pasien/<%= kunjungan.pasien_id %>" class="btn btn-outline" target="_blank" title="Buka riwayat lengkap pasien di tab baru">
-      📑 Buka Riwayat Lengkap &rarr;
+      Buka Riwayat Lengkap &rarr;
     </a>
     <a href="/pemeriksaan" class="btn btn-outline">&larr; Kembali ke Antrean</a>
   </div>
@@ -65,7 +65,7 @@
   <div class="card" style="margin-bottom: 20px;">
     <div class="card-header" style="background-color: #f8fafc;">
       <div class="card-title" style="font-size: 14px;">
-        <span>🔍 Referensi: Riwayat Diagnosis Terakhir Pasien</span>
+        <span class="stat-icon info"><i class="bi bi-heart-pulse"></i> Referensi: Riwayat Diagnosis Terakhir Pasien</span>
       </div>
     </div>
     <div class="card-body" style="padding: 14px 20px;">
@@ -88,7 +88,7 @@
   <div class="card">
     <div class="card-header" style="background-color: var(--success-light); border-bottom-color: #a7f3d0;">
       <div class="card-title" style="color: #065f46;">
-        <span>✅ Kunjungan Ini Telah Selesai Diperiksa</span>
+        <span>Kunjungan Ini Telah Selesai Diperiksa</span>
       </div>
     </div>
     <div class="card-body">
@@ -135,7 +135,7 @@
 
       <!-- Resep Obat -->
       <div style="margin-top: 20px;">
-        <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">💊 Resep Obat:</h4>
+        <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Resep Obat:</h4>
         <% if (existingResep && existingResep.length > 0) { %>
           <table class="prescription-table">
             <thead>
@@ -174,13 +174,13 @@
   <div class="card">
     <div class="card-header">
       <div class="card-title">
-        <span>🩺 Formulir Pemeriksaan Medis Pasien</span>
+        <span></span>Formulir Pemeriksaan Medis Pasien</span>
       </div>
     </div>
 
     <div class="card-body">
       <form action="/pemeriksaan/<%= kunjungan.kunjungan_id %>" method="POST" id="formPemeriksaan">
-        
+
         <!-- 1. Tanda-Tanda Vital -->
         <h3 style="font-size: 15px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px; border-bottom: 1px solid var(--border-color); padding-bottom: 6px;">
           1. Tanda-Tanda Vital Pasien
@@ -189,12 +189,12 @@
         <div class="form-row">
           <div class="form-group">
             <label for="tekanan_darah" class="form-label">Tekanan Darah (mmHg) <span class="required">*</span></label>
-            <input 
-              type="text" 
-              name="tekanan_darah" 
-              id="tekanan_darah" 
-              class="form-control" 
-              placeholder="Contoh: 120/80" 
+            <input
+              type="text"
+              name="tekanan_darah"
+              id="tekanan_darah"
+              class="form-control"
+              placeholder="Contoh: 120/80"
               required
             >
             <span class="form-help">Format: Sistol/Diastol</span>
@@ -202,15 +202,15 @@
 
           <div class="form-group">
             <label for="suhu" class="form-label">Suhu Tubuh (&deg;C) <span class="required">*</span></label>
-            <input 
-              type="number" 
-              step="0.1" 
-              min="35.0" 
-              max="43.0" 
-              name="suhu" 
-              id="suhu" 
-              class="form-control" 
-              placeholder="Contoh: 36.8" 
+            <input
+              type="number"
+              step="0.1"
+              min="35.0"
+              max="43.0"
+              name="suhu"
+              id="suhu"
+              class="form-control"
+              placeholder="Contoh: 36.8"
               required
             >
             <span class="form-help">Kisaran normal: 36.5 - 37.5 &deg;C</span>
@@ -218,14 +218,14 @@
 
           <div class="form-group">
             <label for="berat_badan" class="form-label">Berat Badan (kg) <span class="required">*</span></label>
-            <input 
-              type="number" 
-              step="0.1" 
-              min="1" 
-              name="berat_badan" 
-              id="berat_badan" 
-              class="form-control" 
-              placeholder="Contoh: 65.5" 
+            <input
+              type="number"
+              step="0.1"
+              min="1"
+              name="berat_badan"
+              id="berat_badan"
+              class="form-control"
+              placeholder="Contoh: 65.5"
               required
             >
           </div>
@@ -238,35 +238,35 @@
 
         <div class="form-group">
           <label for="diagnosis" class="form-label">Diagnosis Medis <span class="required">*</span></label>
-          <textarea 
-            name="diagnosis" 
-            id="diagnosis" 
-            class="form-control" 
-            rows="2" 
-            placeholder="Tuliskan diagnosis dokter (contoh: Faringitis Akut, Dispepsia, Hipertensi Grade 1...)" 
+          <textarea
+            name="diagnosis"
+            id="diagnosis"
+            class="form-control"
+            rows="2"
+            placeholder="Tuliskan diagnosis dokter (contoh: Faringitis Akut, Dispepsia, Hipertensi Grade 1...)"
             required
           ></textarea>
         </div>
 
         <div class="form-group">
           <label for="tindakan" class="form-label">Tindakan / Terapi Medis <span class="required">*</span></label>
-          <textarea 
-            name="tindakan" 
-            id="tindakan" 
-            class="form-control" 
-            rows="2" 
-            placeholder="Tuliskan tindakan medis atau edukasi yang diberikan (contoh: Istirahat tirah baring, diet rendah garam, terapi oral...)" 
+          <textarea
+            name="tindakan"
+            id="tindakan"
+            class="form-control"
+            rows="2"
+            placeholder="Tuliskan tindakan medis atau edukasi yang diberikan (contoh: Istirahat tirah baring, diet rendah garam, terapi oral...)"
             required
           ></textarea>
         </div>
 
         <div class="form-group">
           <label for="catatan" class="form-label">Catatan Tambahan (Opsional)</label>
-          <input 
-            type="text" 
-            name="catatan" 
-            id="catatan" 
-            class="form-control" 
+          <input
+            type="text"
+            name="catatan"
+            id="catatan"
+            class="form-control"
             placeholder="Catatan kontrol ulang, alergi, atau pesan khusus untuk pasien..."
           >
         </div>
@@ -329,7 +329,7 @@
         <!-- Tombol Aksi Simpan Transaksi -->
         <div class="form-actions" style="margin-top: 30px;">
           <button type="submit" class="btn btn-success" style="padding: 10px 24px; font-size: 15px;">
-            💾 Simpan Pemeriksaan, Resep & Selesaikan Kunjungan
+            Simpan Pemeriksaan, Resep & Selesaikan Kunjungan
           </button>
           <a href="/pemeriksaan" class="btn btn-outline">Batal</a>
         </div>

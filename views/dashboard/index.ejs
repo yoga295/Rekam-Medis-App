@@ -20,7 +20,7 @@
       </a>
     <% } else if (currentUser.role === 'dokter') { %>
       <a href="/pemeriksaan" class="btn btn-primary">
-        🩺 Mulai Periksa Pasien (<%= stats.antreanDokterHariIni %>)
+        Mulai Periksa Pasien (<%= stats.antreanDokterHariIni %>)
       </a>
     <% } %>
   </div>
@@ -30,7 +30,7 @@
 <div class="stats-grid">
   <!-- Total Pasien -->
   <div class="stat-card">
-    <div class="stat-icon primary">👥</div>
+    <div class="stat-icon primary"><i class="bi bi-people"></i></div>
     <div class="stat-info">
       <h3><%= stats.totalPasien %></h3>
       <p>Total Pasien Terdaftar</p>
@@ -39,7 +39,7 @@
 
   <!-- Kunjungan Hari Ini -->
   <div class="stat-card">
-    <div class="stat-icon info">📋</div>
+    <div class="stat-icon info"><i class="bi bi-clipboard2-pulse"></i></div>
     <div class="stat-info">
       <h3><%= stats.kunjunganHariIni %></h3>
       <p>Kunjungan Hari Ini</p>
@@ -48,7 +48,7 @@
 
   <!-- Menunggu Pemeriksaan -->
   <div class="stat-card">
-    <div class="stat-icon warning">⏳</div>
+    <div class="stat-icon warning"><i class="bi bi-hourglass-split"></i></div>
     <div class="stat-info">
       <h3><%= stats.antreanMenunggu %></h3>
       <p>Antrean Menunggu</p>
@@ -57,7 +57,7 @@
 
   <!-- Sedang Diperiksa -->
   <div class="stat-card">
-    <div class="stat-icon info">🩺</div>
+    <div class="stat-icon info"><i class="bi bi-heart-pulse"></i></div>
     <div class="stat-info">
       <h3><%= stats.antreanDiperiksa %></h3>
       <p>Sedang Diperiksa</p>
@@ -66,7 +66,7 @@
 
   <!-- Selesai Diperiksa -->
   <div class="stat-card">
-    <div class="stat-icon success">✅</div>
+    <div class="stat-icon success"><i class="bi bi-check-circle"></i></div>
     <div class="stat-info">
       <h3><%= stats.kunjunganSelesai %></h3>
       <p>Selesai Diperiksa</p>
@@ -75,7 +75,7 @@
 
   <!-- Obat Stok Menipis -->
   <div class="stat-card">
-    <div class="stat-icon <%= stats.obatMenipis > 0 ? 'danger' : 'success' %>">💊</div>
+    <div class="stat-icon <%= stats.obatMenipis > 0 ? 'danger' : 'success' %>"><i class="bi bi-capsule"></i></div>
     <div class="stat-info">
       <h3><%= stats.obatMenipis %></h3>
       <p>Obat Stok Menipis (&lt; 10)</p>
@@ -87,7 +87,7 @@
 <div class="card">
   <div class="card-header">
     <div class="card-title">
-      <span>🏥 Antrean Pasien Hari Ini</span>
+      <span>Antrean Pasien Hari Ini</span>
     </div>
     <a href="/kunjungan" class="btn btn-outline btn-sm">
       Lihat Semua Antrean &rarr;
@@ -122,7 +122,7 @@
                 <td class="text-center">
                   <% if (currentUser.role === 'dokter' && (k.status === 'Menunggu' || k.status === 'Diperiksa')) { %>
                     <a href="/pemeriksaan/<%= k.id %>" class="btn btn-primary btn-sm">
-                      🩺 Periksa
+                      Periksa
                     </a>
                   <% } else { %>
                     <a href="/pemeriksaan/<%= k.id %>" class="btn btn-outline btn-sm">
